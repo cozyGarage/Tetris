@@ -35,41 +35,49 @@ namespace Tetris
         // method to check if a given cell in the game grid is empty (i.e., has a value of 0)
         public bool IsEmpty(int r, int c)
         {
+            /*  return IsInside(r, c) && grid[r, c] == 0; */
             const int emptyBlock = 0;
             return IsInside(r, c) && grid[r, c] == emptyBlock; ;
         }
         // method to check if a given row in the game grid is full (i.e., all cells in the row have non-zero values)
         public bool IsRowFull(int r)
         {
-            for(int c = 0; c < this.Columns; c++)
+            /*for(int c = 0; c < this.Columns; c++)
             {
                 if (grid[r, c] == 0)
                 {
                     return false;
                 }
             }
-            return true;
+            return true;*/
+            const int emptyBlock = 0;
+            return !Enumerable.Range(0, Columns).Any(c => grid[r, c] == emptyBlock);
+
         }
         // method to check if a given row in the game grid is empty (i.e., all cells in the row have a value of 0)
         public bool IsRowEmpty(int r)
         {
-            for (int c = 0; c < this.Columns; c++)
+            /*for (int c = 0; c < this.Columns; c++)
             {
                 if (grid[r, c] != 0)
                 {
                     return false;
                 }
             }
-            return true;
+            return true;*/
+            const int emptyBlock = 0;
+            return !Enumerable.Range(0, Columns).Any(c => grid[r, c] != emptyBlock);
         }
         // method to clear a given row in the game grid (i.e., set all cells in the row to 0)
         private void ClearRow(int r)
         {
-            for(int c = 0; c < this.Columns; c++)
+            const int emptyBlock = 0;
+            for (int c = 0; c < Columns; c++)
             {
-                grid[r, c] = 0;
+                grid[r, c] = emptyBlock;
             }
         }
+    
         // method to move a given row in the game grid down by the specified number of rows
         private void MoveRowDown(int r, int numRows)
         {
@@ -84,20 +92,20 @@ namespace Tetris
         // This is used in the ClearFullRows function to move all rows above a cleared row down by the number of rows that were cleared.
         public int ClearFullRows()
         {
-            int cleared = 0; // variable to keep track of the number of rows that are cleared
+            int clearedRows = 0; // variable to keep track of the number of rows that are cleared
             for (int r = Rows -1; r >=0; r--)
             {
                 if (IsRowFull(r))
                 {
                     ClearRow(r); // clear the full row
-                    cleared++;
+                    clearedRows++;
                 }
-                else if (cleared > 0)
+                else if (clearedRows > 0)
                 {
-                    MoveRowDown(r,cleared); // method to move a given row in the game grid down by the specified number of rows
+                    MoveRowDown(r,clearedRows); // method to move a given row in the game grid down by the specified number of rows
                 }
             }
-            return cleared;
+            return clearedRows;
         }
 
     }
