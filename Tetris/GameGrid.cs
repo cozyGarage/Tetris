@@ -8,33 +8,37 @@ namespace Tetris
 {
     public class GameGrid
     {
+        // 2D array to store the state of the game grid
         private readonly int[,] grid;
-
+        // property to get the number of rows in the game grid
         public int Rows { get; }
-
+        // property to get the number of columns in the game grid
         public int Columns { get; }
-
+        // indexer to access the state of a particular cell in the game grid
         public int this[int r,int c]
         {
             get => grid[r, c];
             set => grid[r, c] = value;
         }
+        // constructor to initialize the game grid with the given number of rows and columns
         public GameGrid(int rows, int columns)
         {
-            this.Rows = rows;
-            this.Columns = columns;
-            grid = new int[this.Rows, this.Columns];
+            Rows = rows;
+            Columns = columns;
+            grid = new int[Rows, Columns];
         }
-
+        // method to check if a given row and column is inside the bounds of the game grid
         public bool IsInside(int r, int c)
         {
-            return r>=0 && c>=0 && r<this.Rows &&c < this.Columns;
+            return r>=0 && c>=0 && r<Rows && c < Columns;
         }
+        // method to check if a given cell in the game grid is empty (i.e., has a value of 0)
         public bool IsEmpty(int r, int c)
         {
-            return IsInside(r, c) && grid[r, c] == 0;
+            const int emptyBlock = 0;
+            return IsInside(r, c) && grid[r, c] == emptyBlock; ;
         }
-
+        // method to check if a given row in the game grid is full (i.e., all cells in the row have non-zero values)
         public bool IsRowFull(int r)
         {
             for(int c = 0; c < this.Columns; c++)
@@ -46,6 +50,7 @@ namespace Tetris
             }
             return true;
         }
+        // method to check if a given row in the game grid is empty (i.e., all cells in the row have a value of 0)
         public bool IsRowEmpty(int r)
         {
             for (int c = 0; c < this.Columns; c++)
@@ -57,6 +62,7 @@ namespace Tetris
             }
             return true;
         }
+        // method to clear a given row in the game grid (i.e., set all cells in the row to 0)
         private void ClearRow(int r)
         {
             for(int c = 0; c < this.Columns; c++)
@@ -64,28 +70,31 @@ namespace Tetris
                 grid[r, c] = 0;
             }
         }
+        // method to move a given row in the game grid down by the specified number of rows
         private void MoveRowDown(int r, int numRows)
         {
             for( int c = 0; c < this.Columns; c++)
             {
-                grid[r +numRows, c] = grid[r, c];
-                grid[r, c] = 0;
+                grid[r +numRows, c] = grid[r, c];// move the cell in the row down by the specified number of rows
+                grid[r, c] = 0; // set the original cell to 0
             }
         }
-
+        // shifts a row down by a given number of rows.
+        // It does this by copying each element of the row to the corresponding element in the new row below it, and then setting the original element to 0.
+        // This is used in the ClearFullRows function to move all rows above a cleared row down by the number of rows that were cleared.
         public int ClearFullRows()
         {
-            int cleared = 0;
-            for(int r = Rows -1; r >=0; r--)
+            int cleared = 0; // variable to keep track of the number of rows that are cleared
+            for (int r = Rows -1; r >=0; r--)
             {
                 if (IsRowFull(r))
                 {
-                    ClearRow(r);
+                    ClearRow(r); // clear the full row
                     cleared++;
                 }
                 else if (cleared > 0)
                 {
-                    MoveRowDown(r,cleared);
+                    MoveRowDown(r,cleared); // method to move a given row in the game grid down by the specified number of rows
                 }
             }
             return cleared;
