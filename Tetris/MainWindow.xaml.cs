@@ -207,5 +207,9 @@ namespace Tetris
             GameOverMenu.Visibility = Visibility.Hidden;
             await GameLoop();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            TutorialGrid.Visibility = Visibility.Hidden;
+        }
     }
 }
