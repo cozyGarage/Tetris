@@ -69,7 +69,7 @@ namespace Tetris
             return !Enumerable.Range(0, Columns).Any(c => grid[r, c] != emptyBlock);
         }
         // method to clear a given row in the game grid (i.e., set all cells in the row to 0)
-        private void ClearRow(int r)
+        public void ClearRow(int r)
         {
             const int emptyBlock = 0;
             for (int c = 0; c < Columns; c++)
@@ -77,9 +77,9 @@ namespace Tetris
                 grid[r, c] = emptyBlock;
             }
         }
-    
+
         // method to move a given row in the game grid down by the specified number of rows
-        private void MoveRowDown(int r, int numRows)
+        public void MoveRowDown(int r, int numRows)
         {
             for( int c = 0; c < this.Columns; c++)
             {
