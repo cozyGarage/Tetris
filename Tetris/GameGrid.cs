@@ -24,20 +24,20 @@ namespace Tetris
             Columns = columns;                                                      // set the number of columns              
             grid = new int[Rows, Columns];                                          // initialize the game grid with the given number of rows and columns
         }
-        // method to check if a given row and column is inside the bounds of the game grid
-        public bool IsInside(int r, int c)
+        
+        public bool IsInside(int r, int c)                                          // method to check if a given row and column is inside the bounds of the game grid
         {
-            return r>=0 && c>=0 && r<Rows && c < Columns;
+            return r>=0 && c>=0 && r<Rows && c < Columns;                           // return true if the given row and column is inside the bounds of the game grid
         }
-        // method to check if a given cell in the game grid is empty (i.e., has a value of 0)
-        public bool IsEmpty(int r, int c)
+        
+        public bool IsEmpty(int r, int c)                                           // method to check if a given cell in the game grid is empty (i.e., has a value of 0)
         {
-            /*  return IsInside(r, c) && grid[r, c] == 0; */
-            const int emptyBlock = 0;
-            return IsInside(r, c) && grid[r, c] == emptyBlock; ;
+            
+            const int emptyBlock = 0;                                               // constant to represent an empty cell in the game grid (i.e., a cell with a value of 0)
+            return IsInside(r, c) && grid[r, c] == emptyBlock; ;                    // return true if the given cell is inside the bounds of the game grid and has a value of 0
         }
-        // method to check if a given row in the game grid is full (i.e., all cells in the row have non-zero values)
-        public bool IsRowFull(int r)
+        
+        public bool IsRowFull(int r)                                                // method to check if a given row in the game grid is full (i.e., all cells in the row have non-zero values)
         {
             /*for(int c = 0; c < this.Columns; c++)
             {
@@ -47,8 +47,8 @@ namespace Tetris
                 }
             }
             return true;*/
-            const int emptyBlock = 0;
-            return !Enumerable.Range(0, Columns).Any(c => grid[r, c] == emptyBlock);
+            const int emptyBlock = 0;                                                   // constant to represent an empty cell in the game grid (i.e., a cell with a value of 0)
+            return !Enumerable.Range(0, Columns).Any(c => grid[r, c] == emptyBlock);        // return true if the given row is inside the bounds of the game grid and all cells in the row have non-zero values
 
         }
         // method to check if a given row in the game grid is empty (i.e., all cells in the row have a value of 0)
