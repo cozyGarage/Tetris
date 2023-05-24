@@ -94,12 +94,12 @@ namespace Tetris
             {
                 if (IsRowFull(r))
                 {
-                    ClearRow(r); // clear the full row
+                    ClearRow(r);                                                                    // clear the full row
                     clearedRows++;
                 }
                 else if (clearedRows > 0)
                 {
-                    MoveRowDown(r,clearedRows); // method to move a given row in the game grid down by the specified number of rows
+                    MoveRowDown(r,clearedRows);                                                     // method to move a given row in the game grid down by the specified number of rows
                 }
             }
             return clearedRows;
