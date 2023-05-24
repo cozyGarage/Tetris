@@ -8,24 +8,21 @@ namespace Tetris
 {
     public class GameGrid
     {
-        // 2D array to store the state of the game grid
-        private readonly int[,] grid;
-        // property to get the number of rows in the game grid
-        public int Rows { get; }
-        // property to get the number of columns in the game grid
-        public int Columns { get; }
-        // indexer to access the state of a particular cell in the game grid
-        public int this[int r,int c]
+        
+        private readonly int[,] grid;                                               // 2D array to store the state of the game grid
+        public int Rows { get; }                                                    // property to get the number of rows in the game grid
+        public int Columns { get; }                                                 // property to get the number of rows in the game grid
+        public int this[int r,int c]                                                // indexer to access the state of a particular cell in the game grid
         {
-            get => grid[r, c];
-            set => grid[r, c] = value;
+            get => grid[r, c];                                                      // get the value of the cell at the given row and column
+            set => grid[r, c] = value;                                              // set the value of the cell at the given row and column
         }
-        // constructor to initialize the game grid with the given number of rows and columns
-        public GameGrid(int rows, int columns)
+        
+        public GameGrid(int rows, int columns)                                      // constructor to initialize the game grid with the given number of rows and columns
         {
-            Rows = rows;
-            Columns = columns;
-            grid = new int[Rows, Columns];
+            Rows = rows;                                                            // set the number of rows
+            Columns = columns;                                                      // set the number of columns              
+            grid = new int[Rows, Columns];                                          // initialize the game grid with the given number of rows and columns
         }
         // method to check if a given row and column is inside the bounds of the game grid
         public bool IsInside(int r, int c)
