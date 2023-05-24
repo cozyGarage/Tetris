@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    public abstract class Block
+    public abstract class Block                                                                                     // class Block that is abstract the block pieces in the game.
     {
-        protected abstract Position[][] Tiles { get; }
-        protected abstract Position StartOffset { get; }
-        public abstract int Id { get; }
+        protected abstract Position[][] Tiles { get; }                                                              // protected abstract Position[][] Tiles that is the position of the tiles in the game.
+        protected abstract Position StartOffset { get; }                                                            // protected abstract Position StartOffset that is the starting position of the block.
+        public abstract int Id { get; }                                                                             // public abstract int Id that is the id of the block.
 
-        private int rotationState;
-        private Position offset;
+        private int rotationState;                                                                                  // private int rotationState that is the rotation state of the block.
+        private Position offset;                                                                                    // private Position offset that is the offset of the block.
 
-        public Block()
+        public Block()                                                                                              // public Block() that is the constructor for the block.
         {
-            offset = new Position(StartOffset.Row, StartOffset.Column);
+            offset = new Position(StartOffset.Row, StartOffset.Column);                                             // offset is a new Position with the StartOffset.Row and StartOffset.Column.
         }
 
         public IEnumerable<Position> TilePositions()
