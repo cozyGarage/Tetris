@@ -7,7 +7,13 @@ The game plays on a grid of 20 rows and 10 column. However, we need 2 extra row 
 The rows will be indexed from top to bottom and the column will be indexed from left to right. There is the class GameGrid to represent the GameGrid, and the contructor of this class consist of 2 dimensional integer array.
 <img width="424" alt="Screenshot" src="https://github.com/cozyGarage/Tetris/assets/9263674/5ec95127-18cc-4e9f-85d5-d0e498f82949">
 
+Here we demonstrate how many type of the block in the game and how we register in on the game grid array.
 
+<img width="349" alt="Screenshot 2023-05-25 at 0 20 07" src="https://github.com/cozyGarage/Tetris/assets/9263674/e0d659ab-103e-4706-9a8b-c6a2a7dffac6">
+
+here is how we use id to mark those blocks
+
+<img width="348" alt="Screenshot 2023-05-25 at 0 20 21" src="https://github.com/cozyGarage/Tetris/assets/9263674/94ab7645-f44f-407a-8fea-7c26a29afd7a">
 
 
  The values 0 and 1 used in IsRowFull, IsEmpty, ClearRow, and MoveRowDown should be defined as constants or enums to improve code readability.
