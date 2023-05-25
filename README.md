@@ -1,4 +1,11 @@
 # Tetris
+
+
+
+
+
+
+
 Build Tetris app
 
 
@@ -45,6 +52,21 @@ Each Block will have 1 rotating point that we use to turn the block Clockwise or
 ![7Blocks-Rotating](https://github.com/cozyGarage/Tetris/assets/9263674/eae6288d-b642-4770-a754-dee1893b006e)
 To rotate each block, we create a 4x4 grid with the center is the center of each block.
 ![7Blocks-Center](https://github.com/cozyGarage/Tetris/assets/9263674/e84ffc34-fbb3-40e6-93fc-ccb4ae962260)
+
+This class should be an abstract class, each type of blocks will have it own class derived from this parent class.
+
+## Postion
+The position class use to represent the current position of moving block on game grid.
+
+## BlockQueue
+
+This class is responsible for picking the next block for the game.
+ It's constant a Block array, which an instance should be the random 1 of 7 type of the block
+ 
+## GameState
+This class control the gameflow:
+It consists of
+
 
 
 
