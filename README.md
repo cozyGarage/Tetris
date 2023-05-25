@@ -27,12 +27,25 @@ GameGrid helps some method to check:
         * Given call is empty or not.
         * Given row is full or not.
         * Given row is empty or not.
-         
+        * Clear the row when it is full and down it down.
+        
+    
 
 
 
  The values 0 and 1 used in IsRowFull, IsEmpty, ClearRow, and MoveRowDown should be defined as constants or enums to improve code readability.
 
 ![image](https://user-images.githubusercontent.com/9263674/235161818-96b7e451-455f-4b13-bf31-16c4ce698026.png)
+
+
+## Blocks
+In Tetris there is 7 blocks in Tetris. We will represent 7 Blocks in the game
+![7Blocks](https://github.com/cozyGarage/Tetris/assets/9263674/34bbc698-e9a2-4ed4-8ecd-cba3797ac21e)
+Each Block will have 1 rotating point that we use to turn the block Clockwise or Reverse Clockwise
+![7Blocks-Rotating](https://github.com/cozyGarage/Tetris/assets/9263674/eae6288d-b642-4770-a754-dee1893b006e)
+To rotate each block, we create a 4x4 grid with the center is the center of each block.
+![7Blocks-Center](https://github.com/cozyGarage/Tetris/assets/9263674/e84ffc34-fbb3-40e6-93fc-ccb4ae962260)
+
+
 
 
