@@ -1,8 +1,14 @@
 # Tetris
 
+## Install app
+Download the zip file : Tetris_release and run the Tetris.exe executable file
+Require .NET 6
 
+Or you can build the project on Visual Studio and run it.
 
+## Demo
 
+https://youtu.be/d-2dKYCpVfw
 
 
 
