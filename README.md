@@ -1,10 +1,10 @@
 # Tetris
 
 ## Install app
-Download the zip file : Tetris_release and run the Tetris.exe executable file
-Require .NET 6
-VirusTotal results : https://www.virustotal.com/gui/file/00f2eba03f6674ff4ba3934cd7ab0aabd442facb89088dbbd627277d1fded263?nocache=1
-Or you can build the project on Visual Studio and run it.
+Download the zip file : Tetris_release and run the Tetris.exe executable file  
+Require .NET 6  
+VirusTotal results : https://www.virustotal.com/gui/file/00f2eba03f6674ff4ba3934cd7ab0aabd442facb89088dbbd627277d1fded263?nocache=1  
+Or you can build the project on Visual Studio and run it.  
 
 ## Demo
 
@@ -36,11 +36,11 @@ yellow tile has value 4, green tile has value 5, purple tile has value 6, red ti
 The GameGrid class is 2 dimensional array. It has row and collumn. and an indexer to provide easy access for the array.
 In the construcor of the class, we will take in 2 parameter. in the way, we can modify the gamegrid, or create many different object of GameGrid for many different game mode for expamle.
 GameGrid helps some method to check:
-        * Given cell is in grid or not.
-        * Given call is empty or not.
-        * Given row is full or not.
-        * Given row is empty or not.
-        * Clear the row when it is full and down it down.
+        * Given cell is in grid or not.  
+        * Given call is empty or not.  
+        * Given row is full or not.  
+        * Given row is empty or not.  
+        * Clear the row when it is full and down it down.  
         
     
 
