@@ -3,7 +3,7 @@
 ## Install app
 Download the zip file : Tetris_release and run the Tetris.exe executable file
 Require .NET 6
-
+VirusTotal results : https://www.virustotal.com/gui/file/00f2eba03f6674ff4ba3934cd7ab0aabd442facb89088dbbd627277d1fded263?nocache=1
 Or you can build the project on Visual Studio and run it.
 
 ## Demo
@@ -12,7 +12,7 @@ https://youtu.be/d-2dKYCpVfw
 
 
 
-Build Tetris app
+## Build Tetris app
 
 
 The logic of the application:
