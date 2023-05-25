@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    public class GameState
+    public class GameState                                                                  
     {
-        private Block currentBlock;
+        private Block currentBlock;                                                     
 
         public Block CurrentBlock
         {
