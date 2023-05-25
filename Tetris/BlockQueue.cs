@@ -23,21 +23,21 @@ namespace Tetris
 
         public Block NextBlock { get; private set; }                    // This property contains the next block.
 
-        public BlockQueue()
+        public BlockQueue()                                             // This constructor initializes the next block.
         {
-            NextBlock = RandomBlock();
+            NextBlock = RandomBlock();                                  // The next block is set to a random block.
         }
 
-        private Block RandomBlock()
+        private Block RandomBlock()                                     // This method returns a random block.
         {
-            return blocks[random.Next(blocks.Length)];
+            return blocks[random.Next(blocks.Length)];                  // A random block is returned.
         }
 
-        public Block GetAndUpdate()
+        public Block GetAndUpdate()                                     // This method returns the next block and updates the next block.
         {
-            Block block = NextBlock;
+            Block block = NextBlock;                                    // The next block is stored in a variable.
 
-            do
+            do                                                          // A new next block is generated until it is not the same as the current next block.
             {
                 NextBlock = RandomBlock();
             }
