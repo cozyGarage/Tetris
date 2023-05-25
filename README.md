@@ -19,7 +19,7 @@ yellow tile has value 4, green tile has value 5, purple tile has value 6, red ti
 
 <img width="348" alt="Screenshot" src="https://github.com/cozyGarage/Tetris/assets/9263674/94ab7645-f44f-407a-8fea-7c26a29afd7a">
 
-##GameGrid
+## GameGrid
 The GameGrid class is 2 dimensional array. It has row and collumn. and an indexer to provide easy access for the array.
 In the construcor of the class, we will take in 2 parameter. in the way, we can modify the gamegrid, or create many different object of GameGrid for many different game mode for expamle.
 GameGrid helps some method to check:
