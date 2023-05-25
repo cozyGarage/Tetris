@@ -11,9 +11,13 @@ Here we demonstrate how many type of the block in the game and how we register i
 
 <img width="349" alt="Screenshot 2023-05-25 at 0 20 07" src="https://github.com/cozyGarage/Tetris/assets/9263674/e0d659ab-103e-4706-9a8b-c6a2a7dffac6">
 
-here is how we use id to mark those blocks. Emptry cell will be present with value zero, cyan tile present with value 1, blue tile present with value 2, orange tile has value 3, yellow tile has value 4, green tile has value 5, purple tile has value 6, red tile has value 7.
+here is how we use id to mark those blocks. Emptry cell will be present with value zero, cyan tile present with value 1, blue tile present with value 2, orange tile has value 3, yellow tile has value 4, green tile has value 5, purple tile has value 6, red tile has value 7. The current block will be not register the value until it is unmovable or the game is over
 
 <img width="348" alt="Screenshot 2023-05-25 at 0 20 21" src="https://github.com/cozyGarage/Tetris/assets/9263674/94ab7645-f44f-407a-8fea-7c26a29afd7a">
+
+The GameGrid class is 2 dimensional array. It has row and collumn. and an indexer to provide easy access for the array.
+In the construcor of the class, we will take in 2 parameter. in the way, we can modify the gamegrid, or create many different object of GameGrid for many different game mode for expamle.
+
 
 
  The values 0 and 1 used in IsRowFull, IsEmpty, ClearRow, and MoveRowDown should be defined as constants or enums to improve code readability.
