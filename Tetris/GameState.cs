@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    public class GameState                                                                  
+    public class GameState                                  // This class contains the game state.                                                   
     {
-        private Block currentBlock;                                                     
+        private Block currentBlock;                         // This field contains the current block.                                              
 
-        public Block CurrentBlock
+        public Block CurrentBlock                           // This property contains the current block.
         {
             get => currentBlock;
             private set
             {
-                currentBlock = value;
-                currentBlock.Reset();
+                currentBlock = value;                       // The current block is set to the value.
+                currentBlock.Reset();                           // The current block is reset. 
 
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++)                     // The current block is moved up until it is at the top of the game grid.
                 {
-                    currentBlock.Move(1, 0);
+                    currentBlock.Move(1, 0);                    // The current block is moved down.
 
-                    if (!BlockFits())
+                    if (!BlockFits())                           
                     {
                         currentBlock.Move(-1, 0);
                     }
@@ -37,12 +37,12 @@ namespace Tetris
         public Block HeldBlock { get; private set; }
         public bool CanHold { get; private set; }
 
-        public GameState()
+        public GameState()                  // This constructor initializes the game state. 
         {
-            GameGrid = new GameGrid(22, 10);
-            BlockQueue = new BlockQueue();
-            CurrentBlock = BlockQueue.GetAndUpdate();
-            CanHold = true;
+            GameGrid = new GameGrid(22, 10);                    // The game grid is initialized.
+            BlockQueue = new BlockQueue();                      // The block queue is initialized.
+            CurrentBlock = BlockQueue.GetAndUpdate();               // The current block is set to the next block.
+            CanHold = true;                                     // The player can hold a block.
         }
 
         private bool BlockFits()

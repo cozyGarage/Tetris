@@ -18,38 +18,38 @@ namespace Tetris
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window                // This class is used to display the game.
     {
-        private readonly ImageSource[] tileImages = new ImageSource[]                                                               
+        private readonly ImageSource[] tileImages = new ImageSource[]       // This array contains the images for the tiles.                                                         
         {
-            new BitmapImage(new Uri("Assets/TileEmpty.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileCyan.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileBlue.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileOrange.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileYellow.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileGreen.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TilePurple.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/TileRed.png", UriKind.Relative))
+            new BitmapImage(new Uri("Assets/TileEmpty.png", UriKind.Relative)),     // The first image is the empty tile.
+            new BitmapImage(new Uri("Assets/TileCyan.png", UriKind.Relative)),          // The second image is the cyan tile.
+            new BitmapImage(new Uri("Assets/TileBlue.png", UriKind.Relative)),          // The third image is the blue tile.
+            new BitmapImage(new Uri("Assets/TileOrange.png", UriKind.Relative)),            // The fourth image is the orange tile.
+            new BitmapImage(new Uri("Assets/TileYellow.png", UriKind.Relative)),        // The fifth image is the yellow tile.
+            new BitmapImage(new Uri("Assets/TileGreen.png", UriKind.Relative)),         // The sixth image is the green tile.
+            new BitmapImage(new Uri("Assets/TilePurple.png", UriKind.Relative)),            // The seventh image is the purple tile.
+            new BitmapImage(new Uri("Assets/TileRed.png", UriKind.Relative))            // The eighth image is the red tile.
         };
 
         private readonly ImageSource[] blockImages = new ImageSource[]
         {
-            new BitmapImage(new Uri("Assets/Block-Empty.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-I.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-J.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-L.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-O.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-S.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-T.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-Z.png", UriKind.Relative))
+            new BitmapImage(new Uri("Assets/Block-Empty.png", UriKind.Relative)),       // The first image is the empty block.
+            new BitmapImage(new Uri("Assets/Block-I.png", UriKind.Relative)),           // The second image is the I block.
+            new BitmapImage(new Uri("Assets/Block-J.png", UriKind.Relative)),           // The third image is the J block.
+            new BitmapImage(new Uri("Assets/Block-L.png", UriKind.Relative)),           // The fourth image is the L block.
+            new BitmapImage(new Uri("Assets/Block-O.png", UriKind.Relative)),           // The fifth image is the O block.
+            new BitmapImage(new Uri("Assets/Block-S.png", UriKind.Relative)),           // The sixth image is the S block.
+            new BitmapImage(new Uri("Assets/Block-T.png", UriKind.Relative)),           // The seventh image is the T block.
+            new BitmapImage(new Uri("Assets/Block-Z.png", UriKind.Relative))            // The eighth image is the Z block.
         };
 
-        private readonly Image[,] imageControls;
-        private readonly int maxDelay = 1000;
-        private readonly int minDelay = 75;
-        private readonly int delayDecrease = 25;
+        private readonly Image[,] imageControls;                                    // This array contains the image controls for the game grid.
+        private readonly int maxDelay = 1000;                                       // This field contains the maximum delay between frames.
+        private readonly int minDelay = 75;                                         // This field contains the minimum delay between frames.
+        private readonly int delayDecrease = 25;                                    // This field contains the amount of delay decrease per level.
 
-        private GameState gameState = new GameState();
+        private GameState gameState = new GameState();                              // This field contains the game state.
 
         public MainWindow()
         {
