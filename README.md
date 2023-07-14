@@ -68,6 +68,7 @@ The position class use to represent the current position of moving block on game
 
 This class is responsible for picking the next block for the game.
  It's constant a Block array, which an instance should be the random 1 of 7 type of the block
+ create the block
  
 ## GameState
 This class control the gameflow:
