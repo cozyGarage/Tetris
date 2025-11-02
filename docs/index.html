@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .video-container {
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .features {
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .features ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            color: #555;
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .download-section {
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .requirements {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .requirements h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .requirements p {
+            color: #856404;
+            margin: 5px 0;
+        }
+        
+        footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Tetris</h1>
+        <p class="subtitle">Classic Tetris Game for Windows</p>
+        
+        <div class="video-container">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/d-2dKYCpVfw" 
+                    title="Tetris Demo" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Classic Tetris gameplay</li>
+                <li>7 different block types</li>
+                <li>20x10 game grid</li>
+                <li>Smooth controls and rotation</li>
+                <li>Built with .NET 6 and WPF</li>
+            </ul>
+        </div>
+        
+        <div class="download-section">
+            <h2>Download</h2>
+            <a href="https://github.com/cozyGarage/Tetris/releases/latest" class="btn">
+                📥 Download Latest Release
+            </a>
+            <a href="https://github.com/cozyGarage/Tetris" class="btn btn-secondary">
+                💻 View on GitHub
+            </a>
+        </div>
+        
+        <div class="requirements">
+            <h3>⚠️ System Requirements</h3>
+            <p><strong>Operating System:</strong> Windows 10 or later</p>
+            <p><strong>Framework:</strong> .NET 6.0 Runtime (Desktop)</p>
+            <p><strong>Note:</strong> If you don't have .NET 6, download it from 
+                <a href="https://dotnet.microsoft.com/download/dotnet/6.0" target="_blank">Microsoft's website</a>
+            </p>
+        </div>
+        
+        <footer>
+            <p>Built with ❤️ using .NET 6 and WPF</p>
+            <p>© 2024 cozyGarage - Open Source Project</p>
+        </footer>
+    </div>
+</body>
+</html>
