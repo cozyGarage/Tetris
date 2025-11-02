@@ -1,10 +1,28 @@
 # Tetris
 
+[![Build and Release](https://github.com/cozyGarage/Tetris/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/cozyGarage/Tetris/actions/workflows/build-and-release.yml)
+[![Deploy to GitHub Pages](https://github.com/cozyGarage/Tetris/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/cozyGarage/Tetris/actions/workflows/deploy-pages.yml)
+
 ## Install app
-Download the zip file : Tetris_release and run the Tetris.exe executable file  
-Require .NET 6  
-VirusTotal results : https://www.virustotal.com/gui/file/00f2eba03f6674ff4ba3934cd7ab0aabd442facb89088dbbd627277d1fded263?nocache=1  
-Or you can build the project on Visual Studio and run it.  
+
+### Option 1: Download Pre-built Release
+1. Visit the [Releases page](https://github.com/cozyGarage/Tetris/releases/latest)
+2. Download the latest `Tetris-Release.zip` file
+3. Extract the ZIP file
+4. Run `Tetris.exe`
+
+**Requirements:**
+- Windows 10 or later
+- .NET 6.0 Runtime (Desktop) - [Download here](https://dotnet.microsoft.com/download/dotnet/6.0)
+
+### Option 2: Build from Source
+1. Clone the repository
+2. Open `Tetris.sln` in Visual Studio 2022 or later
+3. Build the solution (Ctrl+Shift+B)
+4. Run the application (F5)
+
+### Visit our Website
+Check out our [GitHub Pages site](https://cozygarage.github.io/Tetris/) for more information and downloads.  
 
 ## Demo
 
@@ -76,5 +94,30 @@ It consists of
 
 
 
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+### Build and Release Workflow
+- **Trigger:** Push to main/master branch, Pull Requests, or manual dispatch
+- **Runs on:** Windows Latest
+- **Steps:**
+  1. Checkout code
+  2. Setup .NET 6.0
+  3. Restore dependencies
+  4. Build the solution in Release configuration
+  5. Publish the application
+  6. Upload build artifacts
+
+### GitHub Pages Deployment
+- **Trigger:** Push to main/master branch or manual dispatch
+- **Purpose:** Deploys a landing page with download links and game information
+- **URL:** [https://cozygarage.github.io/Tetris/](https://cozygarage.github.io/Tetris/)
+
+### How to Create a Release
+1. Create a new tag: `git tag v1.0.0`
+2. Push the tag: `git push origin v1.0.0`
+3. The workflow will automatically create a GitHub Release with the compiled artifacts
 
 
