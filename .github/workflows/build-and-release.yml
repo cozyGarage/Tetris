@@ -29,9 +29,7 @@ jobs:
         run: dotnet build Tetris.sln --configuration Release --no-restore
 
       - name: Publish
-        run: |
-          dotnet publish Tetris/Tetris.csproj `
-            --configuration Release --output ./publish --no-build
+        run: dotnet publish Tetris/Tetris.csproj --configuration Release --output ./publish --no-build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
